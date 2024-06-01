@@ -1,0 +1,37 @@
+.taskList {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: auto;
+}
+
+.taskRow {
+    max-height: 30vh;
+
+    border-color: lightgray;
+    border-style: solid;
+    border-top-width: 2px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 0;
+}
+.taskRow:last-child {
+    border-bottom-width: 2px;
+}
+
+.taskDone {
+    text-decoration: line-through;
+    animation-name: fadeOut;
+    animation-duration: 2s;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        pointer-events: none;
+    }
+    to {
+        opacity: 0;
+        display: none;
+        pointer-events: none;
+    }
+}
